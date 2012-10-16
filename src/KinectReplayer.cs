@@ -17,7 +17,7 @@ namespace Codewisp.Research.KinectReplay
 
         public readonly List<ReplayFrame> Frames = new List<ReplayFrame>();
 
-        public event EventHandler<ReplayFrameReadyEventArgs> FrameReady;
+        public event EventHandler<ReplayFrameReadyEventArgs> ReplayFrameReady;
         public event EventHandler<ReplayFrameReadyEventArgs> PlaybackEnded;
         public bool IsFinished { get; internal set; }
         public bool IsPlaying { get; internal set; }
@@ -117,13 +117,13 @@ namespace Codewisp.Research.KinectReplay
 
         protected virtual void OnFrameReady(ReplayFrame frame)
         {
-            if (FrameReady != null)
+            if (ReplayFrameReady != null)
             {
                 ReplayFrameReadyEventArgs e = new ReplayFrameReadyEventArgs()
                 {
                     ReplayFrame = frame
                 };
-                FrameReady(this, e);
+                ReplayFrameReady(this, e);
             }
         }
 
