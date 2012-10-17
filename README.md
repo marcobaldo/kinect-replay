@@ -9,4 +9,9 @@ Differences from Kinect Studio
 
 Known limitations
 -----------------
+- Only supports depth and skeleton information
 - Currently skeleton to depth mapping is saved using the 640x480x30 DepthImageFormat without a way to specify which to use
+
+Credits
+----------
+Kinect Toolbox - http://kinecttoolbox.codeplex.com/
